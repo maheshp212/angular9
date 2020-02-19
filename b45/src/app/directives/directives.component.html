@@ -1,0 +1,30 @@
+<p>directives works!</p>
+<p *ngIf="fname == 'qshore'"> this is if </p>
+<p [hidden]="fname == 'qshore'"> this is hidden </p>
+
+
+<p [ngSwitch]="fname">
+    <span *ngSwitchCase="'qshore'">this is qshore</span>
+    <span *ngSwitchCase="'tech'">this is tech</span>
+    <span *ngSwitchCase="'angular'">this is angular</span>
+    <span *ngSwitchDefault>this is default</span>
+</p>
+
+<p [ngClass]="{'bg':(fname == 'qshore')}" > this is dynamic class</p>
+
+<p [ngStyle]="{'background-color':(fname == 'qshore')?'red':'green'}" > this is dynamic style</p>
+
+<h1 *ngFor="let item of fruits"> {{item}} </h1>
+<ol >
+    <li *ngFor="let fruit of fruits"> {{fruit}} </li>
+</ol>
+
+<select >
+    <option *ngFor="let fruit of fruits"> {{fruit}} </option>
+</select>
+
+<table border="1">
+    <tr *ngFor="let fruit of fruits">
+        <td > {{fruit}} </td>
+    </tr>
+</table>

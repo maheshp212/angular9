@@ -10,7 +10,7 @@ export class VariablesComponent {
   fname:string = 'qshore';
   age:number = 34;
   gender:boolean = true;
-  intrest: null = null;
+  interest: null = null;
   fruits:string[] = ['kiwi', 'melon', 'berry'];
   user:any = {name:'hello', tech:'angular'};
   undf:any;
