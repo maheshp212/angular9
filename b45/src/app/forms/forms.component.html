@@ -1,7 +1,12 @@
 <p>forms works!</p>
 <pre>
-    <form name="frm" #f=ngForm>
+    <form name="frm" #f=ngForm (submit)="f.valid && login()">
         <input type="text" name="fnamee" [(ngModel)]="fname" #firstName=ngModel required minlength="5"> {{fname}}
+        <!-- <p *ngIf="firstName.touched && firstName.invalid"> Please enter a valid input </p> -->
+        <!-- <p *ngIf="firstName.dirty && firstName.invalid"> Please enter a valid input </p> -->
+        <!-- <p *ngIf="f.submitted && firstName.invalid"> Please enter a valid input </p> -->
+        <p *ngIf="firstName.dirty && firstName.hasError('required')"> This is a mandaorty field </p>
+        <p *ngIf="firstName.dirty && firstName.hasError('minlength')"> Please enter min 5 charcs </p>
         <input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel> {{lname}}
 
         <input type="submit">
@@ -14,6 +19,8 @@
     pristine :: {{firstName.pristine}}
     touched :: {{firstName.touched}}
     untouched :: {{firstName.untouched}}
+    required :: {{firstName.hasError('required')}}
+    minlength :: {{firstName.hasError('minlength')}}
 
 
     Form states

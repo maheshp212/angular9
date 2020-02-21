@@ -8,6 +8,7 @@ import { IntroComponent } from './intro/intro.component';
 import { VariablesComponent } from './variables/variables.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FormsComponent } from './forms/forms.component';
+import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsComponent } from './forms/forms.component';
     IntroComponent,
     VariablesComponent,
     DirectivesComponent,
-    FormsComponent
+    FormsComponent,
+    ObjFormsComponent
   ],
   imports: [
     BrowserModule,

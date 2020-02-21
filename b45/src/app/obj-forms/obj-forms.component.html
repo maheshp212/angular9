@@ -1,0 +1,34 @@
+<p>obj forms works!</p>
+<pre>
+    <form name="frm" #f=ngForm (submit)="f.valid && login()">
+        <input type="text" name="fnamee" [(ngModel)]="user.fname" #fname=ngModel required minlength="5"> {{user.fname}}
+        <!-- <p *ngIf="fname.touched && fname.invalid"> Please enter a valid input </p> -->
+        <!-- <p *ngIf="fname.dirty && fname.invalid"> Please enter a valid input </p> -->
+        <!-- <p *ngIf="f.submitted && fname.invalid"> Please enter a valid input </p> -->
+        <p *ngIf="fname.dirty && fname.hasError('required')"> This is a mandaorty field </p>
+        <p *ngIf="fname.dirty && fname.hasError('minlength')"> Please enter min 5 charcs </p>
+        <input type="text" name="lname" [(ngModel)]="user.lname" #lname=ngModel> {{user.lname}}
+
+        <input type="submit">
+    </form>
+
+    Field States ::
+    valid :: {{fname.valid}}
+    invalid :: {{fname.invalid}}
+    dirty :: {{fname.dirty}}
+    pristine :: {{fname.pristine}}
+    touched :: {{fname.touched}}
+    untouched :: {{fname.untouched}}
+    required :: {{fname.hasError('required')}}
+    minlength :: {{fname.hasError('minlength')}}
+
+
+    Form states
+    valid :: {{f.valid}}
+    invalid :: {{f.invalid}}
+    dirty :: {{f.dirty}}
+    pristine :: {{f.pristine}}
+    touched :: {{f.touched}}
+    untouched :: {{f.untouched}}
+    submitted :: {{f.submitted}}
+</pre>
