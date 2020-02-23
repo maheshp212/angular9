@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IntroComponent implements OnInit {
 
+  fname = 'qshore';
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  login(){
+    console.log('logic from parent data')
+  }
+
+  checkData(a){
+
+    console.log('#################')
+    console.log(a)
+    console.log('#################')
+
   }
 
 }

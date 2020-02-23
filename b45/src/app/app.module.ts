@@ -14,6 +14,8 @@ import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { MilliPipe } from './milli.pipe';
 import { FirstCapPipe } from './first-cap.pipe';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { AttrDirective } from './attr.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { FirstCapPipe } from './first-cap.pipe';
     HexaPipe,
     ParamsPipe,
     MilliPipe,
-    FirstCapPipe
+    FirstCapPipe,
+    LifeCycleComponent,
+    AttrDirective
   ],
   imports: [
     BrowserModule,
