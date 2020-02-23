@@ -1,0 +1,36 @@
+<p>pipes works!</p>
+
+<pre>
+    {{fname}}
+    {{fname | lowercase}}
+    {{fname | uppercase}}
+
+    {{num}}
+    {{num | number}}
+    {{num | currency}}
+    {{num | currency:'Rs'}}
+    {{num | currency:'INR '}}
+    {{num | currency:'INR'}} <!-- iso code -->
+    {{num | currency:'&#8377;'}}
+    {{num | currency:'&copy;'}}
+
+    {{num | hexaaaaaaaaaaaaaaaa}}
+    {{255 | hexaaaaaaaaaaaaaaaa}}
+    {{15 | hexaaaaaaaaaaaaaaaa}}
+    {{234234 | hexaaaaaaaaaaaaaaaa}}
+    {{5 | params:4:5:2}}
+    {{5 | params:4:5}}
+
+    {{date | milli}}
+
+    {{fname | firstCap}}
+
+
+    {{date}}
+    {{date | date}}
+    {{date | date:'dd-MM-yy'}}
+
+    {{user}}
+
+    {{user |json}}
+</pre>
