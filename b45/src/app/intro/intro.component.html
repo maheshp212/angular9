@@ -6,3 +6,10 @@
     (sendata)="checkData($event)" >
 Attribut Component
 </div>
+
+<!-- attribute name and the variable name can be same or it can be differnt -->
+<app-custom 
+[user]="user"
+(sendAge)="sendAge($event)"
+(sendName)="getName($event)">
+</app-custom>

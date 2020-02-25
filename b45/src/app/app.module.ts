@@ -16,6 +16,7 @@ import { MilliPipe } from './milli.pipe';
 import { FirstCapPipe } from './first-cap.pipe';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { AttrDirective } from './attr.directive';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AttrDirective } from './attr.directive';
     MilliPipe,
     FirstCapPipe,
     LifeCycleComponent,
-    AttrDirective
+    AttrDirective,
+    CustomComponent
   ],
   imports: [
     BrowserModule,
