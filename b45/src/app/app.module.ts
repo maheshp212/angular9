@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from '@angular/forms'
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +19,7 @@ import { FirstCapPipe } from './first-cap.pipe';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 import { AttrDirective } from './attr.directive';
 import { CustomComponent } from './custom/custom.component';
+import { ApisComponent } from './apis/apis.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +37,14 @@ import { CustomComponent } from './custom/custom.component';
     FirstCapPipe,
     LifeCycleComponent,
     AttrDirective,
-    CustomComponent
+    CustomComponent,
+    ApisComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
