@@ -23,7 +23,7 @@ export class ApisComponent implements OnInit {
       console.log(res);
       this.usersList = res.data;
     }, (err:any)=>{
-
+      alert('asdfasdf')
     })
   }
 
