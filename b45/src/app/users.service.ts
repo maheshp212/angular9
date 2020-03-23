@@ -1,18 +1,37 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http'
+//import {Observable} from 'rxjs/observable';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
+  users:any;
 
   constructor(private http:HttpClient) { }
 
   listUsers(){
     let url = 'http://api.qshore.com/users';
     return this.http.get(url);
-
   }
+
+  // listUsersData(){
+  //   new Observable((observer) => {
+  //     if(this.users){
+  //       return this.users;
+  //     } else {
+  //     this.listUsers().subscribe((res:any)=>{
+  //       this.users = res;
+  //       observer.next(res)
+  //       observer.complete()
+  //     }, (err)=>{
+  //       observer.error(err);
+  //     })
+  //   }
+    
+  // })
+  // }
+
   
   viewUser(id){
     let url = 'http://api.qshore.com/view-user/'+id;
