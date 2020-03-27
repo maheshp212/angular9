@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { VarComponent } from './var/var.component';
+import { DirComponent } from './dir/dir.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     IntroComponent,
-    VarComponent
+    VarComponent,
+    DirComponent
   ],
   imports: [ // modules
     BrowserModule,
