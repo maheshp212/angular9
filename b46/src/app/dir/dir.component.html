@@ -1,0 +1,97 @@
+<p>dir works!</p>
+
+Predefined Directives::
+
+<!-- 
+    these all behave like attributes
+    
+*ngIf
+[hidden]
+
+[ngSwitch]
+*ngSwitchCase
+*ngSwitchDefault
+
+*ngFor
+[ngClass]
+[ngStyle]
+
+
+[(ngModel)]
+(click) -->
+
+<!--
+    *  -- conditions & loops
+    [] -- attributs
+    () -- events
+    [()] -- 2way data binding
+    # -- local variables
+-->
+
+<p *ngIf="fname == 'qshore'"> this is if</p>
+
+<p [hidden]="fname == 'qshore'"> this is hidden</p>
+
+<p [ngSwitch]="fname">
+    <span *ngSwitchCase="'qshore'"> this is qshore</span>
+    <span *ngSwitchCase="'tech'"> this is tech</span>
+    <span *ngSwitchCase="'angular'"> this is angular</span>
+    <span *ngSwitchDefault> this is default</span>
+</p>
+
+<!-- *ngFor == ur foreach (works only on arrays) -->
+<!-- ['kiwi', 'melon', 'berry'] -->
+<p *ngFor="let item of fruits"> {{item}}</p>
+<h1 *ngFor="let x of fruits"> {{x}}</h1>
+
+<ol >
+    <li *ngFor="let fruit of fruits"> {{fruit}} </li>
+</ol>
+
+<select>
+    <option *ngFor="let fruit of fruits"> {{fruit}} </option>
+</select>
+
+<!-- kiwi
+melon
+berry -->
+<table border="1">
+    <tr *ngFor="let fruit of fruits">
+        <td> {{fruit}} </td>
+    </tr>
+</table>
+
+<p [ngClass]="{'redborder': (fname=='qshore'), 'greenborder': (fname!='qshore') }" > this is a randowm class</p>
+
+
+<p [ngStyle]="{'background-color': (fname=='qshore')?'blue' : 'yellow'}" > this is a randowm style</p>
+
+
+
+
+
+
+
+
+
+
+
+
+<pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
