@@ -28,6 +28,16 @@ Predefined Directives::
     # -- local variables
 -->
 
+<br><br>
+<pre>
+
+    <input type="text" name="fname" [(ngModel)]="fname"> {{fname}}
+
+    <input type="text" name="lname" [(ngModel)]="lname"> {{lname}}
+
+</pre>
+
+
 <p *ngIf="fname == 'qshore'"> this is if</p>
 
 <p [hidden]="fname == 'qshore'"> this is hidden</p>
@@ -67,9 +77,44 @@ berry -->
 <p [ngStyle]="{'background-color': (fname=='qshore')?'blue' : 'yellow'}" > this is a randowm style</p>
 
 
+<pre>
+    Events
+</pre>
+
+<p (click)="callMe()" > this is click </p>
+<p (dblclick)="callMe()" > this is dbl click </p>
+<p (mouseover)="callMe()" > this is over </p>
+<p (mouseout)="callMe()" > this is out </p>
+<p (mouseenter)="callMe()" > this is enter </p>
+<p (mouseleave)="callMe()" > this is leave </p>
+<p (mouseup)="callMe()" > this is up </p>
+<p (mousedown)="callMe()" > this is down </p>
+<p (mousemove)="callMe()" > this is move </p>
 
 
+<pre>
+    <input type="text" [(ngModel)]="fname" placeholder="click" (click)="callMe()">
 
+    <input type="text" [(ngModel)]="fname" placeholder="focus" (focus)="callMe()">
+
+    <input type="text" [(ngModel)]="fname" placeholder="blur" (blur)="callMe()">
+
+    <input type="text" [(ngModel)]="fname" placeholder="change" (change)="callMe()">
+
+    <input type="text" [(ngModel)]="fname" placeholder="up" (keyup)="callMe()">
+
+    <input type="text" [(ngModel)]="fname" placeholder="down" (keydown)="callMe()">
+
+    <input type="text" [(ngModel)]="fname" placeholder="press" (keypress)="callMe()">
+
+    <input type="text" [(ngModel)]="fname" placeholder="cut" (cut)="callMe()">
+
+    <input type="text" [(ngModel)]="fname" placeholder="copy" (copy)="callMe()">
+
+    <input type="text" [(ngModel)]="fname" placeholder="paste" (paste)="callMe()">
+
+
+</pre>
 
 
 
