@@ -1,0 +1,36 @@
+<p>forms works!</p>
+<pre>
+    <form name="frm" #f=ngForm>
+        
+        <input type="text" name="firstname" [(ngModel)]="fname" #firstName=ngModel required minlength="5"> {{fname}}
+        
+        <input type="text" name="lname" [(ngModel)]="lname" #lastName=ngModel> {{lname}}
+        
+        <input type="submit">
+    </form>
+
+
+    field States::
+
+    valid :: {{firstName.valid}}
+    invalid :: {{firstName.invalid}}
+    dirty :: {{firstName.dirty}}
+    pristine :: {{firstName.pristine}}
+    touched :: {{firstName.touched}}
+    untouched :: {{firstName.untouched}}
+
+
+    Form states::
+
+    valid :: {{f.valid}}
+    invalid :: {{f.invalid}}
+    dirty :: {{f.dirty}}
+    pristine :: {{f.pristine}}
+    touched :: {{f.touched}}
+    untouched :: {{f.untouched}}
+    submitted :: {{f.submitted}}
+
+
+
+
+</pre>

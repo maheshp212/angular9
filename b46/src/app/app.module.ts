@@ -9,6 +9,7 @@ import { IntroComponent } from './intro/intro.component';
 import { VarComponent } from './var/var.component';
 import { DirComponent } from './dir/dir.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PipeComponent } from './pipe/pipe.component';
     IntroComponent,
     VarComponent,
     DirComponent,
-    PipeComponent
+    PipeComponent,
+    FormsComponent
   ],
   imports: [ // modules
     BrowserModule,
