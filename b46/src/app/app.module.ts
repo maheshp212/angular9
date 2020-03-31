@@ -10,6 +10,7 @@ import { VarComponent } from './var/var.component';
 import { DirComponent } from './dir/dir.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { FormsComponent } from './forms/forms.component';
+import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FormsComponent } from './forms/forms.component';
     VarComponent,
     DirComponent,
     PipeComponent,
-    FormsComponent
+    FormsComponent,
+    ObjFormsComponent
   ],
   imports: [ // modules
     BrowserModule,

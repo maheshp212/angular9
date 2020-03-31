@@ -14,4 +14,8 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  login(){
+    alert(`${this.fname} :: ${this.lname}`)
+  }
+
 }

@@ -1,0 +1,44 @@
+<p>obj-forms works!</p>
+<pre>
+    <form name="frm" #f=ngForm (submit)="f.valid && login()">
+        
+        <input type="text" name="fname" [(ngModel)]="user.fname" #fname=ngModel required minlength="5"> {{user.fname}}
+        <!-- <p style="color:red;" *ngIf="fname.dirty && fname.invalid"> Please enter a valid input</p> -->
+        <!-- <p style="color:red;" *ngIf="fname.touched && fname.invalid"> Please enter a valid input</p> -->
+        <!-- <p style="color:red;" *ngIf="f.submitted && fname.invalid"> Please enter a valid input</p> -->
+
+
+        <p style="color:red;" *ngIf="fname.dirty && fname.hasError('required')"> tjhis is a mandatory field</p>
+        <p style="color:red;" *ngIf="fname.dirty && fname.hasError('minlength')"> Please enter min 5 charcs</p>
+
+        <input type="text" name="lname" [(ngModel)]="user.lname" #lastName=ngModel> {{user.lname}}
+        
+        <input type="submit">
+    </form>
+
+
+    field States::
+
+    valid :: {{fname.valid}}
+    invalid :: {{fname.invalid}}
+    dirty :: {{fname.dirty}}
+    pristine :: {{fname.pristine}}
+    touched :: {{fname.touched}}
+    untouched :: {{fname.untouched}}
+    error-required:: {{fname.hasError('required')}}
+    error-minlength:: {{fname.hasError('minlength')}}
+
+    Form states::
+
+    valid :: {{f.valid}}
+    invalid :: {{f.invalid}}
+    dirty :: {{f.dirty}}
+    pristine :: {{f.pristine}}
+    touched :: {{f.touched}}
+    untouched :: {{f.untouched}}
+    submitted :: {{f.submitted}}
+
+
+
+
+</pre>
