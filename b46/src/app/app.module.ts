@@ -11,6 +11,7 @@ import { DirComponent } from './dir/dir.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ObjFormsComponent } from './obj-forms/obj-forms.component';
     DirComponent,
     PipeComponent,
     FormsComponent,
-    ObjFormsComponent
+    ObjFormsComponent,
+    LifeCycleComponent
   ],
   imports: [ // modules
     BrowserModule,

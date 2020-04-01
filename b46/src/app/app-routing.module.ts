@@ -7,6 +7,7 @@ import { DirComponent } from './dir/dir.component';
 import { PipeComponent } from './pipe/pipe.component';
 import {FormsComponent} from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
+import {LifeCycleComponent} from './life-cycle/life-cycle.component'
 
 
 const routes: Routes = [
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path:'dir', component:DirComponent},
   {path:'pipes', component:PipeComponent},
   {path:'forms', component:FormsComponent},
-  {path:'obj-forms', component:ObjFormsComponent}
+  {path:'obj-forms', component:ObjFormsComponent},
+  {path:'life-cycle', component:LifeCycleComponent}
 ];
 
 @NgModule({
