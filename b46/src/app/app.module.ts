@@ -12,6 +12,9 @@ import { PipeComponent } from './pipe/pipe.component';
 import { FormsComponent } from './forms/forms.component';
 import { ObjFormsComponent } from './obj-forms/obj-forms.component';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component';
+import { HexaPipe } from './hexa.pipe';
+import { ParamsPipe } from './params.pipe';
+import { PiPipe, firstCapsPipe } from './pi.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,11 @@ import { LifeCycleComponent } from './life-cycle/life-cycle.component';
     PipeComponent,
     FormsComponent,
     ObjFormsComponent,
-    LifeCycleComponent
+    LifeCycleComponent,
+    HexaPipe,
+    ParamsPipe,
+    PiPipe,
+    firstCapsPipe
   ],
   imports: [ // modules
     BrowserModule,
