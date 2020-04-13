@@ -17,6 +17,8 @@ import { HexaPipe } from './hexa.pipe';
 import { ParamsPipe } from './params.pipe';
 import { PiPipe, firstCapsPipe } from './pi.pipe';
 import { ApisComponent } from './apis/apis.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { ViewUserComponent } from './view-user/view-user.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ApisComponent } from './apis/apis.component';
     ParamsPipe,
     PiPipe,
     firstCapsPipe,
-    ApisComponent
+    ApisComponent,
+    NotfoundComponent,
+    ViewUserComponent
   ],
   imports: [ // modules
     BrowserModule,

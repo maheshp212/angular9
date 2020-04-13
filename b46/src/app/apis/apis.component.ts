@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../users.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-apis',
@@ -9,9 +10,9 @@ import { UsersService } from '../users.service';
 })
 export class ApisComponent implements OnInit {
 
-  usersList:any;
+  usersList:any = [];
   userInfo:any;
-  constructor(private users:UsersService) { }
+  constructor(private users:UsersService, private router: Router) { }
 
   ngOnInit(): void {
     this.listUsers();
@@ -69,6 +70,10 @@ export class ApisComponent implements OnInit {
 
     
     
+  }
+
+  viewUserNav(id){
+    this.router.navigate(['/view-user/' + id]);
   }
 
 }
