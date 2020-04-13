@@ -15,9 +15,16 @@
         <td> {{user.email}} </td>
         <td> {{user.password}} </td>
         <td> 
-            <span>View </span>
-            <p>Edit</p>
-            <div>Delete</div>
+            <span (click)="viewUser(user.id)">View </span>
+            <p (click)="editUser(user.id)" >Edit</p>
+            <div (click)="deleteUser(user.id)">Delete</div>
         </td>
     </tr>
 </table>
+
+<pre>
+    count :: {{usersList.length}}
+    <button (click)="createUser()" >Create </button> 
+
+    {{userInfo | json}}
+</pre>

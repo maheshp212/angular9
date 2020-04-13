@@ -10,10 +10,14 @@ import { UsersService } from '../users.service';
 export class ApisComponent implements OnInit {
 
   usersList:any;
+  userInfo:any;
   constructor(private users:UsersService) { }
 
   ngOnInit(): void {
+    this.listUsers();
+  }
 
+  listUsers(){
     this.users.listUsers().subscribe((res:any) => {
       //success
       
@@ -23,6 +27,48 @@ export class ApisComponent implements OnInit {
       // failure
       console.log(err)
     })
+  }
+
+  viewUser(id){
+    this.users.viewUser(id).subscribe((res:any) => {
+      //success
+      this.userInfo = res;
+    },(err)=>{
+      //failure
+    })
+  }
+
+  createUser(){
+    this.users.addUser().subscribe((res:any) => {
+      //success
+      this.userInfo = res;
+      this.listUsers();
+    },(err)=>{
+      //failure
+    })
+  }
+
+  editUser(id){
+    this.users.editUser(id).subscribe((res:any) => {
+      //success
+      this.userInfo = res;
+      this.listUsers();
+    },(err)=>{
+      //failure
+    })
+  }
+  deleteUser(id){
+    
+    this.users.deleteUser(id).subscribe((res:any) => {
+      //success
+      this.userInfo = res;
+      this.listUsers();
+    },(err)=>{
+      //failure
+    });
+
+    
+    
   }
 
 }
