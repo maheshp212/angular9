@@ -11,7 +11,7 @@ import {LifeCycleComponent} from './life-cycle/life-cycle.component'
 import { ApisComponent } from './apis/apis.component';
 import {NotfoundComponent} from './notfound/notfound.component'
 import { ViewUserComponent } from './view-user/view-user.component';
-
+import {MultiselectComponent} from './multiselect/multiselect.component'
 
 const routes: Routes = [
   {path:'', component: HomeComponent}, // home or landing page
@@ -23,6 +23,7 @@ const routes: Routes = [
   {path:'obj-forms', component:ObjFormsComponent},
   {path:'life-cycle', component:LifeCycleComponent},
   {path:'apis', component:ApisComponent},
+  {path:'multi-select', component:MultiselectComponent},
   {path:'view-user/:id', component:ViewUserComponent},
   {path:'**', component:NotfoundComponent},
 ];
